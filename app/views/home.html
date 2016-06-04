@@ -1,0 +1,198 @@
+<section ng-controller="HomeCtrl" >
+  <section id="it-pro-search-presentation" class="row grey-background text with-padding">
+      <div class="title container">
+        Le site d'emploi dédié au <span class="green-text">secteur IT</span>
+        <br/>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/419ydfrXYsg" frameborder="0" allowfullscreen></iframe>
+      </div>
+  </section>
+  <section id="puzzle-map" class="row teal-background title">
+    <div class="image-overlay container">
+      <img src="images/worldMapPuzzle/worldMap.png"/>
+      <div class="overlayed" style="padding-left: 26px;">
+        <img src="images/worldMapPuzzle/puzzle.png"/>
+      </div>
+      <div id="arrows" style="clear:both;">
+         <img src="images/worldMapPuzzle/leftArrow.png"  ng-class="{visible: itemsToShow['leftArrow'], invisible: !itemsToShow['leftArrow']}" style="margin-left: 20%;"/>
+         <img src="images/worldMapPuzzle/middleArrow.png"   ng-class="{visible: itemsToShow['middleArrow'], invisible: !itemsToShow['middleArrow']}" style="margin-left: 10%;"/>
+         <img src="images/worldMapPuzzle/rightArrow.png"   ng-class="{visible: itemsToShow['rightArrow'], invisible: !itemsToShow['rightArrow']}" style="margin-top: -6px; margin-left: 4%"/>
+       </div>
+      <!-- <a id="puzzle-buttons">Complétez <br/> votre profil</a> -->
+      <div id="puzzle-buttons" class="centered">
+        <button class="item-show-hide btn puzzle-button red-background" ng-show="itemsToShow['leftButton']" style="width: 23%;">Complétez <br/> votre profil</button>
+        <button class="item-show-hide btn puzzle-button green-background" ng-show="itemsToShow['middleButton']" style="width: 20%;">Postulez</button>
+        <button class="item-show-hide btn puzzle-button blue-background" ng-show="itemsToShow['rightButton']" style="width: 21%;">Décrochez <br/> le job</button>
+      </div>
+   </div>
+  </section>
+  <!-- ***** boite à outils ***** -->
+ <section id="boite-outil" class="with-padding">
+   <div class="container">
+     <div class="row-fluid">
+       <div class="title blue-text">La boite à outils IT</div>
+
+       <div class="span11">
+         <div class="boiteindex curl-top-left bt1" align="center">
+            <img src="images/toolbox/iconejuridique.png">
+            <h3>Juridique</h3>
+         </div>
+         <div class="boiteindex orange curl-top-left bt2" align="center">
+            <img src="images/toolbox/iconecv.png">
+            <h3>Redige mon cv</h3>
+         </div>
+         <div class="boiteindex vert curl-top-left bt3" align="center">
+            <img src="images/toolbox/hunter.png">
+            <h3>Head Hunter</h3>
+         </div>
+         <div class="boiteindex bleu curl-top-left bt4" align="center">
+            <img src="images/toolbox/euroicone.png">
+            <h3>Combien je coute</h3>
+         </div>
+         <div class="boiteindex rose curl-top-left bt5" align="center">
+            <img src="images/toolbox/metiericone.png">
+            <h3>Les metiers IT</h3>
+         </div>
+       </div>
+       <!-- <div class="wholeToolbox"><a href="#" class="float-shadow" >Voir toutes les boîtes à outils</a></div> -->
+       <button class="btn toolbox-button blue-background" >Voir toute la boîte à outils</button>
+     </div>
+   </div>
+ </section>
+<!-- ***** fin boite outil ***** -->
+
+<!-- ***** recrute index ***** -->
+ <!-- <section id="recrute-index">
+   <div class="container">
+     <div class="row-fluid">
+       <h1>ils recrutent </h1>
+        <div class="span1" style=" margin-left:7%;padding-top:15px;" align="right"><a class="prev"><img src="images/recruiting/prev.png"></a></div>
+        <div class="span9" >
+           <div id="owl-demo" class="owl-carousel">
+             <div class="item"><img src="images/recruiting/logo1.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo3.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo1.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo4.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo3.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo1.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo4.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo3.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo4.png" alt=""></div>
+             <div class="item"><img src="images/recruiting/logo1.png" alt=""></div>
+           </div>
+         </div>
+         <div class="span1" style=" padding-top:15px;" align="left"><a class="next"><img src="images/recruiting/next.png"></a></div>
+         <div class="clear"></div>
+         <div class="ttlerecruteur"><a href="#" class="float-shadow" >voir toutes les recruteurs</a></div>
+     </div>
+   </div>
+ </section> -->
+<!-- ***** fin recrute index ***** -->
+
+<!-- ***** testimonial index ***** -->
+ <section id="testimonial-index">
+   <div class="container">
+     <div class="row-fluid">
+       <h1>Testimonials</h1>
+       <!-- 1 Testimonial -->
+       <div class="span3 offset1">
+          <div class="testimindex">
+            <p>Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti</p>
+          </div>
+       </div>
+       <!-- 1 Testimonial -->
+       <div class="span3">
+          <div class="testimindex">
+            <p>Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti</p>
+          </div>
+       </div>
+       <!-- 1 Testimonial -->
+       <div class="span3">
+          <div class="testimindex">
+            <p>Apud has gentes, quarum exordiens initium ab Assyriis ad Nili cataractas porrigitur et confinia Blemmyarum, omnes pari sorte sunt bellatores seminudi coloratis sagulis pube tenus amicti</p>
+          </div>
+       </div>
+       <div class="clear"></div>
+       <div class="ttlerecruteur"><a href="#" class="float-shadow" >Voir tous les témoignages</a></div>
+     </div>
+   </div>
+ </section>
+<!-- ***** fin testimonial index ***** -->
+<!-- ***** footer ***** -->
+   <footer>
+    <div class="container">
+       <div class="row-fluid">
+        <div class="span9">
+          <div id="footer-menu">
+            <div class="blockfooter bf1">
+              <h3>Itprosearch</h3>
+              <a href="#">A propos de ItProSearch</a>
+              <a href="#"> CGU & CGV</a>
+              <a href="#">Mentions légales</a>
+              <a href="#">Espace presse</a>
+              <a href="#">Nous contacter</a>
+              <a href="#">AL'équipe ItProSearch</a>
+            </div>
+            <div class="blockfooter bf2">
+              <h3 style="color:#f1c210;">Recruteurs</h3>
+              <a href="#">Le Matching</a>
+              <a href="#">Déposer une offre</a>
+              <a href="#">E-head hanter</a>
+              <a href="#">La Boîte à outil</a>
+              <a href="#">Tarifs</a>
+              <a href="#">Aide et FAQ</a>
+            </div>
+            <div class="blockfooter bf3">
+              <h3 style="color:#eb4c37;">Freelances</h3>
+              <a href="#">Missions Freelance</a>
+              <a href="#">Calculer mes frais</a>
+              <a href="#">Conseil juridique</a>
+              <a href="#">Le Forum</a>
+              <a href="#">La boîte à outil</a>
+              <a href="#">Vos droits</a>
+              <a href="#">L'entretien</a>
+              <a href="#">Tarifs des missions</a>
+              <a href="#">Aide et FAQ</a>
+            </div>
+            <div class="blockfooter bf4">
+              <h3 style="color:#a769bc;">Salarié</h3>
+              <a href="#">Entretien d'embauche</a>
+              <a href="#">Rédiger mon CV</a>
+              <a href="#">Formation</a>
+              <a href="#">Lettre de motivation</a>
+              <a href="#">Le Forum</a>
+              <a href="#">La boîte à outil</a>
+              <a href="#">Vos droits</a>
+              <a href="#">L'entretien</a>
+              <a href="#">Salaire</a>
+            </div>
+            <div class="blockfooter bf5">
+              <h3 style="color:#f69b0c;">Etudiants</h3>
+              <a href="#">Entretien d'embauche</a>
+              <a href="#">Rédiger mon CV</a>
+              <a href="#">Formation</a>
+              <a href="#">Lettre de motivation</a>
+              <a href="#">Le Forum</a>
+              <a href="#">La boîte à outil</a>
+              <a href="#">Vos droits</a>
+              <a href="#">L'entretien</a>
+              <a href="#">Salaire</a>
+            </div>
+            <div class="clear"></div>
+            <div id="footersocial">
+               <a href="" class="buzz-out"><img src="images/footer/twiter.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/social2.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/facebook.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/googleplus.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/vmeo.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/mac.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/doyou.png"></a>
+               <a href="" class="buzz-out"><img src="images/footer/in.png" ></a>
+               <a href="" class="buzz-out"><img src="images/footer/rss.jpg"></a>
+               <a href="" class="buzz-out"><img src="images/footer/windows.png"></a>
+            </div>
+          </div>
+        </div>
+       </div>
+     </div>
+   </footer>
+</section>

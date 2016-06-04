@@ -29,6 +29,16 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/home', {
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        controllerAs: 'home'
+      })
+      .when('/header', {
+        templateUrl: 'views/header.html',
+        controller: 'HeaderCtrl',
+        controllerAs: 'header'
+      })
       .otherwise({
         redirectTo: '/'
       });

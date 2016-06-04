@@ -1,0 +1,103 @@
+<nav id="left-menu" >
+  <div id="main-menu" style="-webkit-transform-style: preserve-3d;">
+    <div class="scroll-layout full" data-disable-scroll-bar="true">
+      <div class="inner">
+        <a href="#" class="index first">
+          <span class="menu-el-content"><img src="images/left-menu/iconehome.png" /><br class="clearfix" />Accueil</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconehome.png" /><br class="clearfix" />Accueil</span>
+        </a>
+        <a href="#" class="freelances">
+          <span class="menu-el-content"><img src="images/left-menu/iconefreelance.png" /><br class="clearfix" />Freelances</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconefreelance.png" /><br class="clearfix" />Freelances</span>
+        </a>
+        <a href="#" class="salaries">
+          <span class="menu-el-content"><img src="images/left-menu/iconesalaries.png" /><br class="clearfix" />Salariés</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconesalaries.png" /><br class="clearfix" />Salariés</span>
+        </a>
+        <a href="#" class="etudiants">
+          <span class="menu-el-content"><img src="images/left-menu/iconeetudiants.png" /><br class="clearfix" />Etudiants</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconeetudiants.png" /><br class="clearfix" />Etudiants</span>
+        </a>
+        <a href="#" class="missions">
+          <span class="menu-el-content"><img src="images/left-menu/iconemission.png" /><br class="clearfix" />Les missions it</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconemission.png" /><br class="clearfix" />Les missions it</span>
+        </a>
+        <a href="#" class="cdicdd">
+          <span class="menu-el-content"><img src="images/left-menu/iconecdicdd.png" /><br class="clearfix" />Les cdi/cdd it</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconecdicdd.png" /><br class="clearfix" />Les cdi/cdd it</span>
+        </a>
+        <a href="#" class="actus">
+          <span class="menu-el-content"><img src="images/left-menu/iconeactus.png" /><br class="clearfix" />Les actus it</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconeactus.png" /><br class="clearfix" />Les actus it</span>
+        </a>
+        <a href="#" class="forum">
+          <span class="menu-el-content"><img src="images/left-menu/iconeforum.png" /><br class="clearfix" />Le Forum</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconeforum.png" /><br class="clearfix" />Le Forum</span>
+        </a>
+        <a href="#" class="outils">
+          <span class="menu-el-content"><img src="images/left-menu/iconeboite.png" /><br class="clearfix" />Boite à outils</span>
+          <span class="menu-el-hover-content"><img src="images/left-menu/iconeboite.png" /><br class="clearfix" />Boite à outils</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="container it-pro-navbar">
+  <div class="container header-container" style="height: 88px; width: 1070px;" ng-controller="HeaderCtrl">
+    <div class="navbar-header">
+      <a ui-sref="home">
+        <div class="logo">
+        </div>
+      </a>
+    </div>
+    <nav class="navbar-collapse" role="navigation">
+      <ul class="hide-small-screen nav navbar-nav" ng-if="menu.shouldRender(authentication.user);">
+        <li ng-repeat="item in menu.items | orderBy: 'position'" ng-if="item.shouldRender(authentication.user);" ng-switch="item.type" ng-class="{ active: $state.includes(item.state), dropdown: item.type === 'dropdown' }" class="{{item.class}}" dropdown="item.type === 'dropdown'">
+          <a ng-switch-when="dropdown" class="dropdown-toggle" dropdown-toggle role="button">{{::item.title}}&nbsp;<span class="caret"></span></a>
+          <ul ng-switch-when="dropdown" class="dropdown-menu">
+            <li ng-repeat="subitem in item.items | orderBy: 'position'" ng-if="subitem.shouldRender(authentication.user);" ui-sref-active="active">
+              <a ui-sref="{{subitem.state}}" ng-bind="subitem.title"></a>
+            </li>
+          </ul>
+          <a ng-switch-default ui-sref="{{item.state}}" ng-bind="item.title"></a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right authentification-buttons"  ng-hide="authentication.user">
+        <li ui-sref-active="active">
+          <button type="button" class="it-pro-button btn green-background" ui-sref="authentication.signin">Connexion</button>
+        </li>
+        <li class="divider-vertical">&nbsp;&nbsp;</li>
+        <li ui-sref-active="active">
+          <button type="button" class="it-pro-button btn white-background" ui-sref="authentication.signup">Inscription</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-show="authentication.user">
+        <li class="dropdown" dropdown>
+          <a class="dropdown-toggle user-header-dropdown-toggle" dropdown-toggle role="button">
+            <img ng-src="{{authentication.user.profileImageURL}}" alt="{{authentication.user.displayName}}" class="header-profile-image" />
+            <span ng-bind="authentication.user.displayName"></span> <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+            <li ui-sref-active="active">
+              <a ui-sref="settings.profile">Edit Profile</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="settings.picture">Change Profile Picture</a>
+            </li>
+            <li ui-sref-active="active" ng-show="authentication.user.provider === 'local'">
+              <a ui-sref="settings.password">Change Password</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="settings.accounts">Manage Social Accounts</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="/api/auth/signout" target="_self">Signout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+  </div>
+</section>

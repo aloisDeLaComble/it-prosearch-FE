@@ -1,0 +1,134 @@
+
+
+#arrows {
+  margin-top: -48px;
+  margin-left: -13%;
+  float: left;
+  z-index: 20;
+  margin-bottom: 15px;
+  position: relative;
+  width: 100%;
+}
+
+#puzzle-map {
+  padding-bottom: 36px;
+}
+
+#puzzle-buttons {
+  margin-left: 10%;
+}
+
+.puzzle-button {
+  float: left;
+  height: 70px;
+  margin-left: 6%;
+  text-align: center;
+  color: white;
+  padding-top: 12px;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 0.4em;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.puzzle-button:hover {
+  color: white;
+}
+
+.item-show-hide {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 1.5s;
+}
+
+.invisible {
+  opacity:0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.visible-add, .visible-remove {
+  -webkit-transition:all linear 0.5s;
+  transition:all linear 1.5s;
+}
+
+.visible,
+.visible-add.visible-add-active {
+  opacity: 1;
+}
+
+.visible-remove.visible-active {
+  opacity:0;
+}
+
+
+
+.item-show-hide.ng-hide {
+  opacity:0;
+}
+
+
+/* ***** boite outil ***** */
+section#boite-outil{ float:right; width:100%; min-width:100%; min-height:425px; background:rgba(0,200,75,0.25); border-bottom:solid 3px #bebebe; padding-bottom:25px;}
+section#boite-outil .boiteindex{float:left; background:#2d3e50; width:192px; margin-left:2%; margin-top:10px;height:162px; border-bottom:solid 3px #192633; position:relative; padding-top:30px;}
+section#boite-outil .boiteindex img{ position:absolute; z-index:5px; top:35px; left:35%;}
+section#boite-outil .boiteindex h3{ color:#fff; text-align:center; font-weight:normal; font-size:1.3em; margin-top:75px; margin-bottom:3px;}
+section#boite-outil .boiteindex p{ clear:both; text-align:justify; color:#fff; padding:7px; padding-top:0;}
+section#boite-outil .orange{ background:#ff5a00; border-bottom-color:#cc4800;}
+section#boite-outil .orange img{ top:40px; left:40%;}
+section#boite-outil .vert{ background:#9acb00; border-bottom-color:#739800;}
+section#boite-outil .vert img{ top:40px;}
+section#boite-outil .bleu{ background:#3f989e; border-bottom-color:#356c70;}
+section#boite-outil .bleu img{ top:40px;}
+section#boite-outil .rose{ background:#fe4445; border-bottom-color:#ec3f40;}
+section#boite-outil .rose img{ top:45px;}
+section#boite-outil .toolbox-button{
+    float: right;
+    margin-right: 37%;
+    margin-top: 55px;
+    color: white;
+    height: 45px;
+    width: 30%;
+    font-weight: bold;
+    font-size: 1.4vw;
+}
+/* ***** fin boite outil ***** */
+
+/* ***** recrute-index ***** */
+/*section#recrute-index{ float:right; width:100%; min-width:100%; min-height:325px; background:#d9e9e9; border-bottom:solid 3px #b2c0c0; padding-bottom:25px;}
+section#recrute-index h1{ text-align:center; font-family: 'helveticatextbook_lt_romanRg'; color:#263949; text-transform:uppercase; font-weight:normal; font-size:3em; margin-top:30px; margin-bottom:40px;}
+section#recrute-index .ttlerecruteur{ width:350px; margin:0 auto; padding-top:20px;}
+section#recrute-index .ttlerecruteur a{ float:left; width:100%; height:40px; background:#9acb00; border-bottom:solid 5px #7ca400; text-align:center; color:#2d3e50; font-family: 'helveticatextbook_lt_romanRg'; font-size:1.1em; text-transform:uppercase; padding-top:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}*/
+/* ***** fin recrute-index ***** */
+
+/* ***** testimonial-index ***** */
+section#testimonial-index{ float:right; width:100%; min-width:100%; min-height:262px; background:#f1f1f1; padding-bottom:25px;}
+section#testimonial-index h1{font-family: 'helveticatextbook_lt_romanRg'; text-align:center; font-size:3em; margin-top:30px; margin-bottom:20px; text-transform:uppercase; color:#ff5a00;}
+section#testimonial-index .testimindex{ float:left; width:90%; min-height:115px; background:#fff; border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;
+-webkit-box-shadow: 0px 5px 2px 0px rgba(212,216,219,1);
+-moz-box-shadow: 0px 5px 2px 0px rgba(212,216,219,1);
+box-shadow: 0px 5px 2px 0px rgba(212,216,219,1); padding:5%; padding-top:3%; padding-bottom:1%; margin-top:10px;}
+section#testimonial-index .testimindex p{ float:left; color:#34495e; font-family: 'helveticatextbook_lt_romanRg'; text-align:justify; padding:10px; background:url(../images/bule1.png) left 5px no-repeat;}
+
+section#testimonial-index .ttlerecruteur{ width:350px; margin:0 auto; padding-top:20px;}
+section#testimonial-index .ttlerecruteur a{ float:left; width:100%; height:40px; background:#FF8000; border-bottom:solid 5px #ff5a00; text-align:center; color:#fff; font-family: 'helveticatextbook_lt_romanRg'; font-size:1.1em; text-transform:uppercase; padding-top:20px; border-radius:5px; -moz-border-radius:5px; -webkit-border-radius:5px;}
+
+/* ***** fin testimonial-index ***** */
+
+/* ***** footer ***** */
+footer{ float:right; width:100%; min-height:280px; min-width:100%; background:#2d3e50; border-top:solid #45617c 3px;}
+#footer-menu{ float:left; width:100%;}
+#footer-menu .blockfooter{ float:left; width:20%; }
+#footer-menu .blockfooter h3{ color:#46be81;  font-family: 'helveticatextbook_lt_romanRg'; font-weight:normal; font-size:01em; margin-bottom:0;}
+#footer-menu .blockfooter a{ float:left; clear:both; color:#93a5a7; font-size:0.8em; font-family: 'helveticatextbook_lt_romanRg'; line-height:1.5em;}
+#footersocial{ float:right; margin-top:20px; margin-right:33%;}
+#footersocial a{ float:left; margin-left:15px;}
+.bf1 a:hover{color:#46be81!important;}
+.bf2 a:hover{color:#f1c210!important;}
+.bf3 a:hover{color:#eb4c37!important;}
+.bf4 a:hover{color:#a769bc!important;}
+.bf5 a:hover{color:#f69b0c!important;}
+/* ***** fin footer ***** */
